@@ -1,4 +1,5 @@
 import PixelArt from "./pixel-art";
+import PixelArtHover from "./pixel-art-hover";
 import PixelsTab from "./pixels-tab";
 
 export default function MotifPixelArt({ pixels, pixelSize, color }) {
@@ -7,10 +8,11 @@ export default function MotifPixelArt({ pixels, pixelSize, color }) {
       {pixels.map((ligne, ligneIndex) => (
         <div style={{ display: "flex" }} key={ligneIndex}>
           {ligne.map((pixel, pixelIndex) => (
-            <PixelArt
+            <PixelArtHover
               key={pixelIndex}
               size={pixelSize}
-              color={color[pixel] || ""}
+              hoverColor="white"
+              baseColor={color[pixel] || ""}
             />
           ))}
         </div>
