@@ -10,7 +10,7 @@ export default function PixelsTab({ pixels, pixelSize, color }) {
             <PixelArt
               key={pixelIndex}
               size={pixelSize}
-              color={color[pixelChar] || ""}
+              color={color ? color[pixelChar] || "" : pixelChar}
             />
           ))}
         </div>

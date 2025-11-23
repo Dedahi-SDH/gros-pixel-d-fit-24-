@@ -2,6 +2,7 @@ import React from "react";
 import PixelsTab from "./pixels-tab";
 import BtnPixel from "./btn_pixel";
 import MotifPixelArt from "./motif-pixel-art";
+import PixelAleatoire from "./pixel-aleatoire";
 
 // const colorMap = {
 //   r: "red",
@@ -47,10 +48,12 @@ function handleAlert() {
 
 export default function App() {
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px", width: "100vh" }}>
       <h1>Mon défi Pixel Art ❤️</h1>
       <MotifPixelArt pixels={smileyPixels} pixelSize={30} color={colorMap} />
       <BtnPixel text={"Clique moi!"} handleAlert={handleAlert} />
+      <hr />
+      <PixelAleatoire />
     </div>
   );
 }
